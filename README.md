@@ -9,9 +9,9 @@ Periodically downloads images from free photography resource site [unsplash.com]
   - Run `gem install bundler` to install
 
 ## Setup
-1. Clone this repository:  
+1. Open Terminal.app
+2. Clone this repository:  
    `git clone https://github.com/istvanp/unsplash-rb.git ~/.unsplash`
-2. Open Terminal.app
 3. `cd ~/.unsplash`
 4. `bundle --standalone`
 5. `open unsplash.rb` and adjust the following to your liking:  
