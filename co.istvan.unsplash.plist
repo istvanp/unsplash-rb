@@ -6,7 +6,7 @@
 	<string>co.istvan.unsplash</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/opt/unsplash/unsplash.rb</string>
+		<string>/usr/local/opt/unsplash-rb/unsplash.rb</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
