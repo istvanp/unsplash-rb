@@ -21,7 +21,7 @@ Periodically downloads images from free photography resource site [unsplash.com]
 ## Usage
 Run `~/.unsplash/unsplash.rb` in the terminal.
    
-## Run Periodically
+## Run Periodically (Mac OS X)
 To run this script every seven days do the following:
 
 1. `cd ~/.unsplash`
