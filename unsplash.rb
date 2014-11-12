@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 # https://github.com/istvanp/unsplash-rb
 
-SOURCE     = "http://unsplash.com/"
+SOURCE     = "http://unsplash.tumblr.com/"
 MAX_IMAGES = 50 # You can increase this number to fetch images further back
 SAVE_PATH  = "~/Pictures/Unsplash/"
 
