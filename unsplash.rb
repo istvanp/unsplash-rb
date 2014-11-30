@@ -45,8 +45,20 @@ begin
     path = expanded_path + File::SEPARATOR + name + '.jpg'
     link = post.xpath('photo-link-url').inner_text
     if link.empty?
-      puts "#{prefix}Skipping #{url} (no photo link) ..."
+      link_text = post.xpath('photo-caption').inner_text
+      link = link_text[/(http:\/\/[^\\"]*)/]
+      if link.empty?
+        puts "#{prefix}Skipping #{url} (no caption link) ..."
+        next
+      end
+      html = mecha.get(link).body
+      doc = Nokogiri::HTML(html)
+      anchor = doc.css('.epsilon a[href*=download]')
+      if anchor.empty?
+        puts "#{prefix}Skipping #{url}/#{link} (no valid link) ..."
       next
+    end
+      link = anchor.xpath('@href')
     end
     if File.exists?(path)
       puts "#{prefix}Skipping #{link} #{path} exists ..."
